@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:id="@+id/group1">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        />
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        />
+    <item android:title="Update FIR"
+        android:id="@+id/UpdateFIR"
+        />
+    <item android:title=" View Statistics"
+        android:id="@+id/stats" />
+
+    <item android:title="Search Details"/>
+
+</group>
+<menu>
+
+    <group android:id="@+id/SearchDetails">
+
+        <item android:id="@+id/viewFIR"
+            android:title="View FIR"/>
+        <item android:title="Criminal Details"
+            android:id="@+id/CriminalDetails" />
+    </group>
+</menu>
+
+</menu>

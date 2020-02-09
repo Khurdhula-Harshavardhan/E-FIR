@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PDFActivity"
+    android:orientation="vertical">
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/pbar"
+        android:layout_gravity="top"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:spb_maxStateNumber="four"
+        app:spb_currentStateNumber="one"
+        app:spb_checkStateCompleted="true"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_stateBackgroundColor="#BDBDBD"
+        app:spb_stateForegroundColor="#317ff8"
+        app:spb_stateNumberBackgroundColor="#808080"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_currentStateDescriptionColor="#317ff8"
+        app:spb_stateNumberForegroundColor="#ffffff" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="350dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:textColorHint="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/acts"
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background=""
+                    android:drawableStart="@drawable/ic_lawyer"
+                    android:drawablePadding="20dp"
+                    android:hint="Acts and Sections"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Occurrence of Event"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:fontFamily="monospace"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:textColorHint="#000000"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/DoO"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background=""
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+                    android:drawablePadding="20dp"
+                    android:hint="Date"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:layout_marginLeft="30sp"
+                android:paddingTop="2dp"
+                android:textColorHint="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/ToO"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background=""
+
+                    android:drawableStart="@drawable/ic_access_time_black_24dp"
+                    android:drawablePadding="20dp"
+                    android:hint="Time"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Place of Occurrence"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:fontFamily="monospace"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:id="@+id/Complainant"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutMobile"
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/Cname"
+                        android:layout_width="350dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="15dp"
+                        android:background=""
+                        android:drawableStart="@drawable/ic_perm_identity_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Name of Complainant*"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/aadhaar"
+                        android:layout_width="350dp"
+                        android:layout_height="45dp"
+                        android:background=" "
+                        android:drawableStart="@drawable/ic_name"
+                        android:drawablePadding="20dp"
+                        android:gravity="center|left"
+                        android:hint="Aadhaar number*"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="350dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_phone_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Mobile number*"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/occupation"
+                        android:layout_width="350dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_card_travel_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Occupation"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/Caddress"
+                        android:layout_width="350dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_pin_drop_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Address"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:text="Gender"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="Male"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="Female"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="Others"
+                        android:textSize="20dp" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:id="@+id/Accused"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="350dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="15dp"
+                        android:background=""
+                        android:drawableStart="@drawable/ic_perm_identity_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Name of Accused*"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/Aaadhaar"
+                        android:layout_width="350dp"
+                        android:layout_height="45dp"
+                        android:background=" "
+                        android:drawableStart="@drawable/ic_name"
+                        android:drawablePadding="20dp"
+                        android:gravity="center|left"
+                        android:hint="Aadhaar number*"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/Aphone"
+                        android:layout_width="350dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_phone_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Mobile number*"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/Aoccupation"
+                        android:layout_width="350dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_card_travel_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Occupation"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:textColorHint="#000000"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/Aaddress"
+                        android:layout_width="350dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_pin_drop_black_24dp"
+                        android:drawablePadding="20dp"
+                        android:hint="Address"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:text="Gender"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="Male"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="Female"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="Others"
+                        android:textSize="20dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/back1"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ligh_blue_button"
+            android:fontFamily="monospace"
+            android:text="back"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="175sp"
+            android:layout_height="50sp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ligh_blue_button"
+            android:fontFamily="monospace"
+            android:text="Next"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "209584755037",
+    "firebase_url": "https://efir-f35c9.firebaseio.com",
+    "project_id": "efir-f35c9",
+    "storage_bucket": "efir-f35c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209584755037:android:e376b155ca149aaef558b4",
+        "android_client_info": {
+          "package_name": "com.example.nagaa.efir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209584755037-4c1rqotk69drjpo5g2vvnsbg9bg9f3tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nagaa.efir",
+            "certificate_hash": "042fdf40e54a73e97664b3d800f3d1dc1b64e9ca"
+          }
+        },
+        {
+          "client_id": "209584755037-hp7lb84udgekjn1r2c28m89lt0sm5csd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsjWnwQX_EuJqXXWcOLlje_atoveUobcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209584755037-hp7lb84udgekjn1r2c28m89lt0sm5csd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
