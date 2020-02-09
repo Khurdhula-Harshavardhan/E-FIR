@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CITIZEN LOGIN</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awsome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./css/login.css">
+  </head>
+  <body class="bg-dark">
+      <img src="./img/logobrand.jpg" alt="" class="logo  rounded-circle my-2">
+      <div class=" display-4 bg-info text-white text-center ">
+          MADHYA PRADHESH POLICE DEPARTMENT
+      </div>
+    <div id="login">
+        <div class="display-4 text-center text-info my-5 heading">MOBILE NUMBER VERIFICATION</div>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div class="card my-3">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" role="form" action="citizenlogin.php" autocomplete="off" id="formLogin" novalidate="" method="POST" onsubmit="return number()" name="num">
+                            <div class="form-group">
+                                <i class="fa fa-mobile" aria-hidden="true"></i><label for="password" class="text-info mx-3" style="font-weight: bold;">ENTER MOBILE NUMBER:</label><br>
+                                <input type="number" name="mobile" id="mobile" class="form-control" placeholder = "Enter Mobile Number" required>
+                            </div>
+                            <div class="form-group text-center">
+                                <input type="submit" name="submit" class="btn btn-info btn-md"value="GET OTP">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div> <br>
+        </div>
+    </div>
+    <!-- FOOTER -->
+        <footer id="main-footer" class=" text-center text-dark bg-light">
+        <h5>M.P ONLINE FIR PORTAL</h5>
+        <p>Copyright &copy; <a href="#" style="text-decoration: none; color: black;"> theERRORSMrcet </a>
+          <span id="year"></span>
+        </p>
+        <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact Us</button> -->
+      </footer>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    
+        // Init Scrollspy
+        $('body').scrollspy({ target: '#main-nav' });
+    
+        // Smooth Scrolling
+        $("#main-nav a").on('click', function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+    
+            const hash = this.hash;
+    
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function () {
+    
+              window.location.hash = hash;
+            });
+          }
+        });
+      </script>
+       <script>
+      
+        function number()
+	{
+	var mobilenum = document.forms["num"]["mobile"].value;
+	
+	
+	if(mobilenum == "")
+	{
+	alert ("Mobile number must be given ");
+return false;
+}
+     }  
+    </script>
+  </body>
+</html>         

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>T&C</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, natus accusantium! Tempore nemo rerum deleniti? Repellendus, facere temporibus soluta iusto error saepe laboriosam eaque eos eveniet culpa ad dignissimos qui dolor iste voluptas dolore nesciunt placeat blanditiis sequi unde. In id eum quas repudiandae doloribus possimus provident, voluptatem a obcaecati eaque sint officiis quibusdam. Repellat nesciunt corporis explicabo eum, maxime totam aut magnam mollitia minus? Ex deserunt repellendus itaque, aliquid unde molestiae voluptatem blanditiis repudiandae possimus rem dolores est, inventore vero similique! Accusantium consequuntur hic, illum officiis minima placeat labore maxime et repellendus? Repellendus quidem perferendis libero ex nam, veniam fugiat id repellat eos reprehenderit illum fugit earum culpa ad perspiciatis impedit iste saepe. Iure facere culpa at praesentium ducimus a velit molestiae, consequuntur ea quisquam et, officiis nobis vitae? Iusto quidem inventore nam architecto mollitia id eligendi possimus, dolore earum! Voluptates quasi mollitia delectus voluptatum? Eligendi mollitia cumque expedita?</h3>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      
+      //edit this message to say what you want
+      var message = "Right Click Disabled!";
+  
+      function clickIE() {
+          if (document.all) {
+              alert(message);
+              return false;
+          }
+      }
+      function clickNS(e) {
+          if (document.layers || (document.getElementById && !document.all)) {
+              if (e.which == 2 || e.which == 3) {
+                  alert(message);
+                  return false;
+              }
+          }
+      }
+      if (document.layers) {
+          document.captureEvents(Event.MOUSEDOWN);
+          document.onmousedown = clickNS;
+      }
+      else {
+          document.onmouseup = clickNS;
+          document.oncontextmenu = clickIE;
+      }
+  
+      document.oncontextmenu = new Function("return false")
+     
+  </script>
+  </body>
+</html>

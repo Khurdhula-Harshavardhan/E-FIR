@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>APPLICATION-FIR</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./css/applystyles.css">
+    <script type="text/javascript" src="bootstrap-datepicker.de.js" charset="UTF-8"></script>
+  </head>
+  <body class="">
+ <form action="insert_record.php" method="post" enctype="multipart/form-data">
+      <div class="container">
+        <div class="form bg-dark my-5">
+            <div class="form-header text-center">
+                <img src="./img/logobrand.jpg" alt="" class="logo rounded-circle my-2">
+              </div>
+                <div class="section bg-dark">  <hr class="bg-primary">
+                    <h1 class="heading text-center text-light">
+                        MADHYA PRADESH POLICE DEPARTMENT <br>
+                        FIR REPORT
+                    </h1> <hr class="bg-primary">
+                  </div>   
+            
+            <div class="container">
+                <div class="section my-2 text-white bg-primary">COMPLAINANT DETAILS*</div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="fname" class="text-white">FIRST NAME :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class=" form-control inputfname" name="fname" required placeholder="Enter First Name">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="lname" class="text-white">LAST NAME :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class=" form-control inputlname" name="lname" required placeholder="Enter Last Name">
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-md-3">
+                        <label for="gender"  class="text-white">GENDER :</label>
+					</div>
+					<div class = "col-md-3">
+					<select id="inputGender" name="gender" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>MALE</option>
+							<option>FEMALE</option>
+							<option>OTHERS</option>
+                          </select>
+						  </div>
+                    
+                    <div class="col-md-3">
+                        <label for="dob" class="text-white">DATE OF OCCURRENCE :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" id="datepicker" name="dob" required class=" form-control">
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3"><label for="text" class="text-white">ADHAAR NUMBER :</label></div>
+                  <div class="col-md-6">
+                    <input type="number" name="adhaar" class="inputAdhaar form-control" required placeholder="Enter Adhaar Card Number">
+                </div>
+             </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="text-white">ADDRESS OF COMPLAINANT:</label>
+                        <textarea class="form-control" rows="5" name="address1" id="address1"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress2" class="text-white">ADDRESS OF INFORMER :</label>
+                        <textarea class="form-control" rows="5" name="address2" required id="address2"></textarea>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-3">
+                          <label for="inputCity" class="text-white">CITY :</label>
+                          <input type="text" class="form-control" name="inputCity" required id="inputCity">
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label for="inputDistrict" class="text-white">DISTRICT :</label>
+                          <input type="text" class="form-control" name="inputDistrict" required id="inputDistrict">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState" class="text-white">STATE :</label>
+                          <select id="inputState" name="inputState"  class="form-control">
+                            <option required selected>Choose...</option>
+                            <option>MADHYA PRADESH</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputZip" class="text-white">ZIP :</label>
+                          <input type="number" class="form-control" name="inputZip" id="inputZip">
+                        </div>
+                      </div>
+                      <div class="row py-2">
+                        <div class="col-md-3">
+                            <label for="mobile" class="text-white">MOBILE NUMBER :</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" required name="mob" class="inputfmobile form-control" required placeholder="Enter Mobile Number With Code">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="email" class="text-white">EMAIL :</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="email" required name="email" class="inputemail form-control" required placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="section my-2 text-white bg-primary">COMPLAINT DETAILS*</div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="type" class="text-white">SUBJECT :</label>
+                      </div>
+                      <div class="col-md-8">
+                        <input type="text" name="subject" required class="inputtype form-control" placeholder="Enter Subject">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="comment" class="text-white">REPORT :</label>
+                      <textarea class="form-control" name="comment" rows="5" id="comment"></textarea>
+                    </div>
+                    <div class="section my-2 text-white bg-primary">ACCUSED DETAILS*</div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="aname" class="text-white">FIRST NAME :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class=" form-control inputaname" name="aname"  placeholder="Enter First Name">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="alname" class="text-white">LAST NAME :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class=" form-control inputalname" name="alname"  placeholder="Enter Last Name">
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-md-3">
+                        <label for="agender"  class="text-white">GENDER :</label>
+					</div>
+					<div class = "col-md-3">
+					<select id="inputaGender" name="agender" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>MALE</option>
+							<option>FEMALE</option>
+							<option>OTHERS</option>
+                          </select>
+						  </div>
+                    
+                    <div class="col-md-3">
+                        <label for="adob" class="text-white">DATE OF BIRTH :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" id="datepicker" name="adob"  class=" form-control">
+                    </div>
+                </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="inputaAddress" class="text-white">ADDRESS OF ACCUSED:</label>
+                      </div>
+                      <div class="col-md-3">
+                        <textarea class="form-control" rows="5" name="aaddress1" id="aaddress1"></textarea>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="text" class="text-white">ADHAAR NUMBER :</label>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="number" name="aaadhaar" class="inputAdhaar form-control"  placeholder="Enter Adhaar Card Number">
+                      </div>
+                    </div>
+                    <div class="section my-2 text-white bg-primary">ATTACHMENTS*</div>
+                 <div class="row">
+                  
+                  <div class="col-md-6"><label for="inputSign" class="text-white">SHO SIGNATURE* :</label></div>
+                  <div class="col-md-6">
+                    <div class="file-field">
+                    <div class="btn btn-white btn-sm float-left">
+                      <span class="text-white">Choose files:(only .JPG/.PNG format)</span>
+                      <input type="file"  required name="image">
+                    </div>
+                  </div>
+                </div>
+             </div>
+             <div class="row">
+              <div class="col-md-6"><label for="inputSign" class="text-white">INFORMER'S SIGNATURE* :</label></div>
+              <div class="col-md-6">
+                <div class="file-field">
+                <div class="btn btn-white btn-sm float-left">
+                  <span class="text-white">Choose files:(only .JPG/.PNG format)</span>
+                  <input type="file" required name="image">
+                </div>
+              </div>
+            </div>
+         </div>
+             <div class="row pb-3">
+               <div class="col-md-3">
+                <label for="uniqueid" class=" text-white">BOOKING NO. :</label>
+              </div>
+               <div class="col-md-3">
+                 <input type="text" class="uniqueid form-control" required name="uniqueid" placeholder="Enter Booking No.">
+               </div>
+             </div>
+            </div>
+            <div class="section bg-light">
+              <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-3">
+                  
+				  <input type="submit" class="btn btn-outline-dark btn-lg my-2"  role="button" id="file" name="file" value="SUBMIT">
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </form>
+    
+    <!-- FOOTER -->
+  <footer id="main-footer" class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center text-light pt-1">
+          <h5>M.P ONLINE FIR PORTAL</h5>
+          <p>Copyright &copy; <a href="#" style="text-decoration: none; color: #FFF;"> theERRORSMrcet </a>
+            <span id="year"></span>
+          </p>
+          <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact Us</button> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+        
+
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      // Get the current year for the copyright
+      $('#year').text(new Date().getFullYear());
+  
+      // Init Scrollspy
+      $('body').scrollspy({ target: '#main-nav' });
+  
+      // Smooth Scrolling
+      $("#main-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+  
+          const hash = this.hash;
+  
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+  
+            window.location.hash = hash;
+          });
+        }
+      });
+    </script>
+    <script>
+      
+      //edit this message to say what you want
+      var message = "Right Click Disabled!";
+  
+      function clickIE() {
+          if (document.all) {
+              alert(message);
+              return false;
+          }
+      }
+      function clickNS(e) {
+          if (document.layers || (document.getElementById && !document.all)) {
+              if (e.which == 2 || e.which == 3) {
+                  alert(message);
+                  return false;
+              }
+          }
+      }
+      if (document.layers) {
+          document.captureEvents(Event.MOUSEDOWN);
+          document.onmousedown = clickNS;
+      }
+      else {
+          document.onmouseup = clickNS;
+          document.oncontextmenu = clickIE;
+      }
+  
+      document.oncontextmenu = new Function("return false")
+     
+  </script>
+  </body>
+</html>
